@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag & Drop | Проект 2</title>
+  </head>
+  <body>
+    <div>
+      <div class="row">
+        <div class="col-header start">Начать</div>
+        <div class="col-header progress">В процессе</div>
+        <div class="col-header done">Готовы</div>
+      </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Карточки | Проект 1</title>
-</head>
+      <div class="row">
+        <div class="placeholder">
+          <div class="item" draggable="true">Перетащи меня</div>
+        </div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+    </div>
 
-<body>
-  <div class="container">
-    <div class="slide"
-      style="background-image: url('https://images.unsplash.com/photo-1561444533-e11ac252308d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80');">
-      <h3>Ferrari</h3>
-    </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1565793979206-10951493332d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80');
-        ">
-      <h3>Aston Martin</h3>
-    </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1605393694134-15c3bd150638?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
-        ">
-      <h3>Audi</h3>
-    </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80');
-        ">
-      <h3>Ford</h3>
-    </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1601278840447-9af5ac4ed157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80');
-        ">
-      <h3>Porsche</h3>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
