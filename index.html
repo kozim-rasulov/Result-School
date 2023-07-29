@@ -1,28 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Drag & Drop | Проект 2</title>
-  </head>
-  <body>
-    <div>
-      <div class="row">
-        <div class="col-header start">Начать</div>
-        <div class="col-header progress">В процессе</div>
-        <div class="col-header done">Готовы</div>
-      </div>
 
-      <div class="row">
-        <div class="placeholder">
-          <div class="item" draggable="true">Перетащи меня</div>
-        </div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Слайдер | Проект 3</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div style="background: linear-gradient(229.99deg, #f2af68 -26%, #641a37 145%);">
+        <h1>Grand Theft Auto</h1>
+        <p>The Criminal Enterprises</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #67a8ea -26%, #e9c5c5 145%);">
+        <h1>Ace Combat</h1>
+        <p>Сlear Sky</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #e0eeef -26%, #313234 145%);">
+        <h1>Assassin's Creed</h1>
+        <p>We act in darkness to serve the light</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #4c4d2e -26%, #fffefa 145%);">
+        <h1>Crysis</h1>
+        <p>The future is hazy, and the end is always close</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #7cc52f -26%, #0f0b08 145%);">
+        <h1>Call of Duty</h1>
+        <p>Anyone can be broken</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #0f1829 -26%, #5d4942 145%);">
+        <h1>Call of Duty</h1>
+        <p>The winner writes the story</p>
+      </div>
+      <div style="background: linear-gradient(229.99deg, #11dee9 -26%, #017e8b 145%);">
+        <h1>Snow in the desert</h1>
+        <p>Love, death & robots</p>
+      </div>
+      <div style="background: linear-gradient(215.32deg, #f90306 -1%, #9e0706 124%);">
+        <h1>Life Hutch</h1>
+        <p>Love, death & robots</p>
+      </div>
+      <div style="background: linear-gradient(221.87deg, #8308ea 1%, #5305af 128%);">
+        <h1>Zima Blue</h1>
+        <p>Love, death & robots</p>
+      </div>
+      <div style="background: linear-gradient(220.16deg, #ffe101 -8%, #f39102 138%);">
+        <h1>Automated Customer Service</h1>
+        <p>Love, death & robots</p>
       </div>
     </div>
+    <div class="main-slide">
+      <div style="background-image: url('https://images.unsplash.com/photo-1601574968106-b312ac309953?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1996&q=80');"></div>
+      <div style="background-image: url('https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2023&q=80');"></div>
+      <div style="background-image: url('https://images.unsplash.com/photo-1501529301789-b48c1975542a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+      <div style="background-image: url('https://images.unsplash.com/photo-1520263115673-610416f52ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');"></div>
+      <div style="background-image: url('https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw2/home/reveal/new-era/new_era-features.jpg');"></div>
+      <div style="background-image: url('https://upload.wikimedia.org/wikipedia/ru/2/24/Call_of_Duty-_Modern_Warfare_II.jpeg');"></div>
+      <div style="background-image: url('https://ixbt.online/gametech/covers/2021/10/21/KzREV3TOMIjuonAXpQQhpkc6sTZ1pOWVSwO0U6o4.jpg');"></div>
+      <div style="background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/JrR2gpqOv9PTg5dU3a1mq/a8ee90ef4c438a43a7213f8b2d153d2c/ac-unity-heroBanner.jpg');"></div>
+      <div style="background-image: url('https://static.bandainamcoent.eu/high/ace-combat/ace-combat-7/00-page-setup/ac7_game-thumbnail.jpg');"></div>
+      <div style="background-image: url('https://wallpapercave.com/wp/wp6929680.jpg');"></div>
+    </div>
+    <div class="controls">
+      <button class="down-button">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button class="up-button">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
 
-    <script src="app.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
+
 </html>
