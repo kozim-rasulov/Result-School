@@ -1,49 +1,32 @@
-const upBtn = document.querySelector('.up-button');
-const downBtn = document.querySelector('.down-button');
-const sidebar = document.querySelector('.sidebar');
-const mainSlide = document.querySelector('.main-slide');
-const slidesCount = mainSlide.querySelectorAll('div').length;
-const container = document.querySelector('.container');
+const board = document.querySelector('#board');
+const colors = ['#FF0000', 'F7FE2E', '#2EFEF7', '#8258FA', '#FF00FF', '#DF013A', '#00FF00', '#00FF00'];
+const SQUARES_NUMBER = 500;
 
-let activeSlideIndex = 0;
+for (let i = 0; i < SQUARES_NUMBER; i++) {
+    const square = document.createElement('div');
+    square.classList.add('square');
 
-sidebar.style.top = `-${(slidesCount - 1) * 100}vh`;
+    square.addEventListener('mouseover', () => 
+    setColor(square));
 
-upBtn.addEventListener('click', () => {
-    changeSlide('up')
-})
+    square.addEventListener('mouseleave', () => 
+    removeColor(square));
 
-downBtn.addEventListener('click', () => {
-    changeSlide('down')
-})
+    board.append(square);
+}
 
+function setColor(element) {
+    const color = getRandomColor();
+    element.style.backgroundColor = color;
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
+}
 
-document.addEventListener('keydown',
-event => {
-    if (event.key === 'ArrowUp') {
-        changeSlide('up')
-    } else if (event.key === 'ArrowDown') {
-        changeSlide('down')
-    }
-})
+function removeColor(element) {
+    element.style.backgroundColor = '#1d1d1d';
+    element.style.boxShadow = `0 0 2px #000`;
+}
 
-
-
-function changeSlide(direction) {
-    if (direction === 'up') {
-        activeSlideIndex++
-        if (activeSlideIndex === slidesCount) {
-            activeSlideIndex = 0
-        }
-    } else if (direction === 'down') {
-        activeSlideIndex--
-        if (activeSlideIndex < 0) {
-            activeSlideIndex = slidesCount - 1
-        }
-    }
-
-    const height = container.clientHeight;
-
-    mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
-    sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
+function getRandomColor() {
+   const index = Math.floor(Math.random() * colors.length)
+   return colors[index];
 }
